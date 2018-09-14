@@ -1,0 +1,207 @@
+body {
+  background: #f2f2f2;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body > * {
+  margin-top: -20px;
+}
+header {
+  background: url(/vaola.png) 10px 20px no-repeat;
+  height: 130px;
+}
+header span {
+  display: none;
+}
+hr {
+  background-color: #3a8735;
+  border: none;
+  height: 32px;
+}
+.white {
+  background-color: #fff;
+  padding-bottom: 20px;
+}
+.container {
+  max-width: 1136px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.shops,
+.brands,
+.categories,
+footer .container {
+  display: grid;
+  grid-gap: 10px;
+  margin: 20px auto;
+}
+.shops > div,
+.brands > div,
+.categories > div {
+  background-color: #eee;
+}
+
+.intro {
+
+}
+
+.shops {
+  grid-template-columns: repeat(2, 1fr);
+}
+.shops > div {
+  height: 317px;
+  background: #eee 50% 50% no-repeat;
+  background-size: cover;
+}
+.shops .first {
+  background-image: url(/outlet.png);
+}
+.shops .first a {
+  display: block;
+  height: 317px;
+}
+.shops .first span {
+  display: none;
+}
+.shops .second {
+  color: white;
+  background-image: url(/schuhe.jpg);
+  text-shadow: 0px 0px 5px #111;
+  text-align: center;
+}
+.shops .second .shoes {
+  font-size: 54px;
+  margin-bottom: 10px;
+  margin-top: 100px;
+  text-transform: uppercase;
+}
+.shops .second a {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid white;
+  color: white;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 0;
+  text-decoration: none;
+  width: 152px;
+}
+.shops .second a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+.shops .second .female {
+}
+.shops .second .male {
+}
+.brands {
+  /*grid-template-columns: 1fr 1fr  1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
+  grid-template-columns: repeat(9, minmax(102px, 1fr));
+}
+.brands > div {
+  height: 59px;
+  background: white 50% 50% no-repeat;
+  background-size: cover;
+}
+.brands > div span {
+  display: none;
+}
+.brands a {
+  display: block;
+  height: 59px;
+}
+.brands .nike {
+  background-image: url(/brands/nike.png);
+}
+.brands .naketano {
+  background-image: url(/brands/naketano.png);
+}
+.brands .adidas {
+  background-image: url(/brands/adidas.png);
+}
+.brands .khujo {
+  background-image: url(/brands/khujo.png);
+}
+.brands .lakeville-mountain {
+  background-image: url(/brands/lakeville-mountain.png);
+}
+.brands .salomon {
+  background-image: url(/brands/salomon.png);
+}
+.brands .gore {
+  background-image: url(/brands/gore.png);
+}
+.brands .cmp {
+  background-image: url(/brands/cmp.png);
+}
+.brands .hoka-oneone {
+  background-image: url(/brands/hoka-oneone.png);
+}
+
+.categories {
+  grid-template-columns: repeat(4, minmax(165px, 1fr));
+}
+.categories > div {
+  height: 156px;
+  background: #eee 50% bottom no-repeat;
+  background-size: cover;
+}
+.categories a {
+  color: white;
+  text-shadow: 0px 0px 5px #111;
+  display: block;
+  line-height: 156px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.categories .first {
+  background-image: url(/damen-sporttaschen.jpg);
+}
+.categories .second {
+  background-image: url(/laufschuhberater.jpg);
+}
+.categories .third {
+  background-image: url(/laufschuhe-damen.jpg);
+}
+.categories .fourth {
+  background-image: url(/laufschuhe-herren.jpg);
+}
+
+footer {
+  margin-top: 20px;
+  padding-bottom: 100px;
+}
+footer .container {
+  /*grid-template-columns: 1fr 1fr  1fr 1fr;*/
+  grid-template-columns: repeat(4, 1fr);
+}
+
+footer .logo {
+}
+footer .links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+footer .links  {
+}
+footer .copyright {
+  grid-column: 3 / span 2;
+}
+
+
+@media (max-width: 1020px) {
+  .brands {
+    grid-template-columns: repeat(auto-fill, minmax(102px, 1fr));
+  }
+}
+
+@media (max-width: 884px) {
+  .categories {
+      grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+  }
+}
+
+@media (max-width: 614px) {
+  .shops {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
